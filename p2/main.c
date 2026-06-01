@@ -1,34 +1,32 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <stdio.h>
 
 int main(void)
 {
+    int input1[20] = { };
+    int input2[20] = { };
+    
+    int *p = nullptr;
+    int *q = nullptr;
+    
     int N = 0;
     scanf("%d", &N);
-    
+
     int sum = 0;
     
-    int input1[N];
-    int input2[N];
-    
-    for(int i = 1; i <= N; i++){
-        scanf("%d", &input1[i]);
+    for(p = input1; p < input1 + N; p++){
+        scanf("%d", p);
     }
-    for(int j = N; j > 0; j--){
-        scanf("%d", &input2[j]);
+    for(q = input2; q < input2 + N; q++){
+        scanf("%d", q);
     }
     
-    for(int k = 1; k <= N; k++){
-        sum = input1[k] + input2[k];
-        printf(" %d", sum);
-        sum = 0;
+    p = input1;
+    q = input2 + N -1;
+    
+    for(int k = 0; k < N; k++){
+        int result[20] = { };
+        result[k] = *(p + k) + *(q - k);
+        printf(" %d", result[k]);
     }
     
     return 0;
