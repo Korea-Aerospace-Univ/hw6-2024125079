@@ -8,6 +8,8 @@ int main(void)
     int *p = nullptr;
     int *q = nullptr;
     
+    int result[20] = { };
+    
     int N = 0;
     scanf("%d", &N);
 
@@ -18,14 +20,10 @@ int main(void)
         scanf("%d", q);
     }
     
-    int sum = 0;
-    
-    int result[20] = { };
     
     for(p = input1, q = input2 + N - 1; p < input1 + N; p++, q--){
             printf(" %d",*p + *q);
     }
-
     
     return 0;
 }
