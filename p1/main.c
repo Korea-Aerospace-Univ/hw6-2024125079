@@ -7,7 +7,7 @@ int main(void)
     char *p = nullptr;
     char *q = nullptr;
     
-    for(int *i = arr; i < arr + 10; i++){
+    for(char *i = arr; i < arr + 10; i++){
         scanf("%c", i);
     }
     
