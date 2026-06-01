@@ -4,11 +4,11 @@ int main(void)
 {
     char arr[10] = { };
     
-    char *p = NULL;
-    char *q = NULL;
+    char *p = nullptr;
+    char *q = nullptr;
     
-    for(int i = 0; i < 10; i++){
-        scanf("%c", &arr[i]);
+    for(int *i = arr; i < arr + 10; i++){
+        scanf("%c", i);
     }
     
     char max_char= '\0';
