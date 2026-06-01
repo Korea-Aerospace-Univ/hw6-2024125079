@@ -4,16 +4,19 @@ int main(void)
 {
     char arr[10] = { };
     
-    char *p, *q;
+    char *p = NULL;
+    char *q = NULL;
     
-    scanf("%s", &arr);
+    for(int i = 0; i < 10; i++){
+        scanf("%c", &arr[i]);
+    }
     
-    char max_char= 0;
+    char max_char= '\0';
     int max_count = 0;
     
-    for(p = arr; p < arr+ 9; p++){
+    for(p = arr; p < arr+ 10; p++){
         int count = 0;
-        for(q = arr; q < arr + 9; q++){
+        for(q = arr; q < arr + 10; q++){
             if(*p == *q){
                 count++;
             }
