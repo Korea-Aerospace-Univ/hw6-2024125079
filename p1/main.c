@@ -29,6 +29,5 @@ int main(void)
     
     printf("%c %d", max_char, max_count);
 
-
     return 0;
 }
